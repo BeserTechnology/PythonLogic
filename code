@@ -1,0 +1,66 @@
+3# Comments for Logical First Game
+print("Welcome to my first Logical game!")
+
+#Variable definition & introduction
+
+name = input("What is your name?  ")
+age = int(input("what is your age? "))
+health = 100
+
+
+print("Hello",name,"your age is ",age,"years old, right?")
+
+#Operators  : + - * /   %   //(absolut)
+#Operators Boolean: < > <= >=   == (is equal to?)   != (is Not equal to??)
+
+print("You are starting with ", health, "% of Energy")
+
+if age >= 18:
+    print("You are old enough!, lets Play!!")
+#elif age >= 13:
+#    print("You can play with Supervision")
+    wants_to_play = input("Do You gonna PLay?? ").lower() 
+    if wants_to_play == "yes":
+        print("Lets Play!! YEah!")
+        
+        left_or_right = input("First Choise....left ot Right> ").lower()
+        if left_or_right == "left":
+
+            ans = input("Amazing!! You check the right path! And found Avalon lake. Round around or cross it? (across/around) ")
+
+            if ans == "around":
+                print("You went around and get the other side")
+            elif ans == "across":
+                print("You go across and a fish bites You. You lost 25% Energy")
+                health -= 25
+
+                ans2 = input("You notice a house and a river. Selection?? (house/River)? ")
+                if ans2 == "house":
+                    print("You go to the house but it is really old with a hole . GAME OVER")
+                    health -= 25
+                else:
+                    print("You go to the house but it is really old with a hole . GAME OVER")     
+                    health -= 55
+
+            else:
+              print(" GAME OVER, You fell into the wrong hole. ")
+
+
+        else:
+          print("GAME OVER, You fell into the leftie hole. ")     
+    
+
+        
+    else:
+        print("See You next time! Cya")
+
+        
+else:
+    print ("But You are not enough play")
+
+
+
+# A or B -> True.   A and B -> False
+# 5 == 5 or 7 == 8 -> true.  change conditions together
+
+
